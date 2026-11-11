@@ -13,6 +13,7 @@ class CfgPatches
         authors[] = { AUTHORS };
         authorUrl = "";
         VERSION_CONFIG;
+        A3A_compatibility[] = {12, 4};
     };
 };
 
