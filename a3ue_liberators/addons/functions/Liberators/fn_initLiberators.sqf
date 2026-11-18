@@ -1,3 +1,4 @@
+if (!isServer) exitWith {};
 waitUntil {
     sleep 0.5;
     !isNil "serverInitDone" && {serverInitDone}
