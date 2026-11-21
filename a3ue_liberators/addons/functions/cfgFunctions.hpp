@@ -36,6 +36,13 @@ class CfgFunctions
                 file = QPATHTOFOLDER(Missions\fn_missionRequest.sqf);
             };
         };
+        class CREATE
+        {
+            class createAICities
+            {
+                file = QPATHTOFOLDER(CREATE\fn_createAICities.sqf)
+            };
+        };
     };
     class ADDON 
     {
