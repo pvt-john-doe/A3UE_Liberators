@@ -38,7 +38,7 @@ if (_tierWar != tierWar) then
 	//Updates the vehicles and groups for the sites
 	[] call A3A_fnc_updatePreference;
 };
-
+// [a3ue_liberators]
 if (
     !areInvadersPresentAtStart
     && {areInvadersDefeated}

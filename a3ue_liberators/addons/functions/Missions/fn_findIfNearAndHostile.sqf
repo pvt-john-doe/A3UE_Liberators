@@ -27,6 +27,7 @@ params [
 
 private _referencePos = getPosWorld _unit;
 private _nearestMarkers = [allMapMarkers, _referencePos] call BIS_fnc_nearestPosition;
+// [a3ue_liberators] Ignore friendly invader targets
 _markers = _markers select 
 { 
     private _markerSide = sidesX getVariable [_x,sideUnknown]; 

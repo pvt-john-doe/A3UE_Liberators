@@ -99,7 +99,7 @@ class Params
                 value = 1;
                 dependentValue = 1;
                 lockedByDependency = 1;
-            }
+            };
         };
     };
 

@@ -16,18 +16,14 @@ params ["_side"];
 Info_1("Starting attack choice script for side %1", _side);
 
 
-// Make a weighted list of rebel attack targets. Leave it empty if it's an invader attack and REB+INVvGOV mode is ON.
+// Make a weighted list of rebel attack targets.
 private _targetsAndWeights = [[], []];
-
+// [a3ue_liberators] Leave it empty if it's an invader attack and REB+INVvGOV mode is ON.
 if !(areInvadersFriendly == 2 && _side == Invaders) then {
     _targetsAndWeights = [teamPlayer, _side] call A3A_fnc_findAttackTargets;
 };
 
 _targetsAndWeights params ["_targets", "_weights"];
-
-//old
-//private _targetsAndWeights = [teamPlayer, _side] call A3A_fnc_findAttackTargets;
-//_targetsAndWeights params ["_targets", "_weights"];
 
 // Give targets within mission distance higher weight
 // Returns total multiplier due to this adjustment
@@ -120,6 +116,7 @@ if (_targetMrk in citiesX) exitWith {
         bigAttackInProgress = true; publicVariable "bigAttackInProgress";
         [_targetMrk, _originMrk] spawn A3A_fnc_invaderPunish;
     } else {
+        // [a3ue_liberators] Occupant punishment
         if (_side isEqualTo Occupants && _areOccupantPunishmentsAllowed && {random 100 < occupantPunishmentChance}) then {
             // Punishment, unsimulated
             Info_2("Starting punishment mission from %1 to %2", _originMrk, _targetMrk);
@@ -148,6 +145,7 @@ if (_targetMrk == "Synd_HQ") exitWith {
 };
 
 // Otherwise it's a major attack. Then we need to decide whether to simulate:
+// [a3ue_liberators] Take simulation distance into account
 if(
     (spawner getVariable _targetMrk) != 2 || 
     (sidesX getVariable _targetMrk) == teamPlayer || 

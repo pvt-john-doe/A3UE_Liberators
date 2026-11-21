@@ -44,7 +44,7 @@ private _milbasesOwned = ({sidesX getVariable [_x,sideUnknown] isEqualTo teamPla
 
 private _airportsTotal = count (airportsX);
 private _airportsOwned = ({sidesX getVariable [_x,sideUnknown] isEqualTo teamPlayer} count (airportsX));
-
+// [a3ue_liberators] New victory conditions
 if (areInvadersFriendly == 2) then
 {
     switch (liberatorsVictoryCondition) do

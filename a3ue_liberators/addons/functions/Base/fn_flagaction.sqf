@@ -254,6 +254,7 @@ switch _typeX do
                 }
             },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4
         ];
+        // [a3ue_liberators]
         if (areInvadersFriendly == 2 and !areInvadersDefeated) then {
             [
                 _flag,

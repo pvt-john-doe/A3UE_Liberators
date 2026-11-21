@@ -176,6 +176,7 @@ switch (_type) do {
 				if 
 				( 
 					_markerSide != teamPlayer && 
+					// [a3ue_liberators] Ignore friendly invader targets
 					(areInvadersFriendly != 2 || _markerSide != Invaders) && 
 					(getPos _x distance getMarkerPos respawnTeamPlayer < distanceMission) 
 				) then {_possibleMarkers pushBack _x}; 
@@ -317,6 +318,7 @@ switch (_type) do {
 			private _siteSide = sidesX getVariable [_site, teamPlayer];
 			if (
 				_siteSide == teamPlayer ||
+				// [a3ue_liberators] Ignore friendly invader targets
 				(areInvadersFriendly == 2 && _siteSide == Invaders)
 			) then {continue};
 			private _base = [_site, _possibleBases] call A3A_fnc_findBasesForConvoy;
