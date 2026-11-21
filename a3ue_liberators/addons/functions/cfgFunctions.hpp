@@ -46,6 +46,7 @@ class CfgFunctions
             {
                 postInit = 1;
             };
+            class removeInvaders {};
             class handOverMarker {};
             class occupantPunish {};
         };

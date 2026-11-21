@@ -14,6 +14,26 @@
             <Original>On</Original>
         </Key>
 
+        <Key ID="STR_params_areInvadersPresentAtStart_title">
+            <Original>Do INV control land at start</Original>
+        </Key>
+        <Key ID="STR_params_areInvadersPresentAtStart_desc">
+            <Original>If disabled, INV will be removed from the map at mission start. They will return when specified War Level is reached.</Original>
+        </Key>
+        <Key ID="STR_params_areInvadersPresentAtStart_0">
+            <Original>No</Original>
+        </Key>
+        <Key ID="STR_params_areInvadersPresentAtStart_1">
+            <Original>Yes</Original>
+        </Key>
+
+        <Key ID="STR_params_invadersArriveAtWarLevel_title">
+            <Original>INV return at War Level</Original>
+        </Key>
+        <Key ID="STR_params_invadersArriveAtWarLevel_desc">
+            <Original>War Level at which INV join the fight if they are not present at start.</Original>
+        </Key>
+
         <Key ID="STR_params_govInvFightSimulationDistancePlayer_title">
             <Original>INV/GOV fight simulation distance relative to player</Original>
         </Key>

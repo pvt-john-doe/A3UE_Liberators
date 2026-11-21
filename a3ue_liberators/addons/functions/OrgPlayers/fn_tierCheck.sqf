@@ -38,3 +38,11 @@ if (_tierWar != tierWar) then
 	//Updates the vehicles and groups for the sites
 	[] call A3A_fnc_updatePreference;
 };
+
+if (
+    !areInvadersPresentAtStart
+    && {areInvadersDefeated}
+    && {_tierWar >= invadersArriveAtWarLevel}
+) then {
+    [] call A3U_fnc_invaderComeback;
+};

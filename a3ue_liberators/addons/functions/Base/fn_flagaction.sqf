@@ -254,7 +254,7 @@ switch _typeX do
                 }
             },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4
         ];
-        if (areInvadersFriendly == 2) then {
+        if (areInvadersFriendly == 2 and !areInvadersDefeated) then {
             [
                 _flag,
                 format [localize "STR_antistasi_actions_hand_over_marker_inv"],

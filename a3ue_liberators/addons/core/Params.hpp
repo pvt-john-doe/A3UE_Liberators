@@ -94,7 +94,47 @@ class Params
                 dependentValue = 0;
                 lockedByDependency = 1;
             };
+            class areInvadersPresentAtStart
+            {
+                value = 1;
+                dependentValue = 1;
+                lockedByDependency = 1;
+            }
         };
+    };
+
+    class areInvadersPresentAtStart: ExtenderParams
+    {
+        title = $STR_params_areInvadersPresentAtStart_title;
+        tooltip = $STR_params_areInvadersPresentAtStart_desc;
+        values[] = {0, 1};
+        texts[] = {
+            $STR_params_areInvadersPresentAtStart_0,
+            $STR_params_areInvadersPresentAtStart_1
+        };
+        default = 1;
+        lockOnSave = 1;
+        lockInGame = 1;
+        class dependencies
+        {
+            class invadersArriveAtWarLevel
+            {
+                value = 1;
+                dependentValue = 1;
+                lockedByDependency = 1;
+            };
+        };
+    };
+
+    class invadersArriveAtWarLevel: ExtenderParams
+    {
+        title = $STR_params_invadersArriveAtWarLevel_title;
+        tooltip = $STR_params_invadersArriveAtWarLevel_desc;
+        values[] = {1,2,3,4,5,6,7,8,9,10};
+        texts[] = {"1","2","3","4","5","6","7","8","9","10"};
+        default = 5;
+        lockOnSave = 1;
+        lockInGame = 1;
     };
 
     class liberatorsWarLevelCoef: ExtenderParams
