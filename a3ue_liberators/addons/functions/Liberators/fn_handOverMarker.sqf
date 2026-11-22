@@ -1,5 +1,5 @@
 /*
-[MARKER, SIDE] remoteExec ["A3A_fnc_handOverMarker", 2];
+[MARKER, SIDE] remoteExec ["a3ue_liberators_functions_fnc_handOverMarker", 2];
 Arguments:
     <MARKER> Marker name
     <SIDE> Side to hand over marker to
@@ -10,6 +10,11 @@ Return value:
 params ["_targetMarker", "_side"];
 
 if (!isServer) exitWith {false};
+private _caller = allPlayers select {
+    owner _x == remoteExecutedOwner
+};
+if (_caller isEqualTo [] || (_caller select 0) != theBoss) exitWith {};
+
 if (sidesX getVariable [_targetMarker, sideUnknown] != teamPlayer) exitWith {false};
 
 
