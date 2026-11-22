@@ -100,6 +100,12 @@ class Params
                 dependentValue = 1;
                 lockedByDependency = 1;
             };
+            class enableOccupantPunishments
+            {
+                value = 1;
+                dependentValue = 0;
+                lockedByDependency = 1;
+            };
         };
     };
 
@@ -159,6 +165,28 @@ class Params
         lockInGame = 0;
     };
 
+    class enableOccupantPunishments: ExtenderParams
+    {
+        title = $STR_params_enableOccupantPunishments_title;
+        tooltip = $STR_params_enableOccupantPunishments_desc;
+        values[] = {1,0};
+        texts[] = {$STR_params_afk_enabled, $STR_params_afk_disabled};
+        default = 0;
+        lockOnSave = 0;
+        lockInGame = 0;
+    };
+
+    class occupantPunishmentChance: ExtenderParams
+    {
+        title = $STR_params_occupantPunishmentChance_title;
+        tooltip = $STR_params_occupantPunishmentChance_desc;
+        values[] = {0,25,50,75,100};
+        texts[] = {"0","0.25","0.5","0.75","1"};
+        default = 50;
+        lockOnSave = 0;
+        lockInGame = 0;
+    };
+
     class liberatorsSpecificParamsSpacer: ExtenderParams
     {
         title = "";
@@ -193,28 +221,6 @@ class Params
         values[] = {1000,2000,3000,4000,5000,6000,7000,8000,9000,10000};
         texts[] = {"1000","2000","3000","4000","5000","6000","7000","8000","9000","10000"};
         default = 3000;
-        lockOnSave = 0;
-        lockInGame = 0;
-    };
-
-    class enableOccupantPunishments: ExtenderParams
-    {
-        title = $STR_params_enableOccupantPunishments_title;
-        tooltip = $STR_params_enableOccupantPunishments_desc;
-        values[] = {1,0};
-        texts[] = {$STR_params_afk_enabled, $STR_params_afk_disabled};
-        default = 0;
-        lockOnSave = 0;
-        lockInGame = 0;
-    };
-
-    class occupantPunishmentChance: ExtenderParams
-    {
-        title = $STR_params_occupantPunishmentChance_title;
-        tooltip = $STR_params_occupantPunishmentChance_desc;
-        values[] = {0,25,50,75,100};
-        texts[] = {"0","0.25","0.5","0.75","1"};
-        default = 50;
         lockOnSave = 0;
         lockInGame = 0;
     };

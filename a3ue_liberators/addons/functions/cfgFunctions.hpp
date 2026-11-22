@@ -40,7 +40,7 @@ class CfgFunctions
         {
             class createAICities
             {
-                file = QPATHTOFOLDER(CREATE\fn_createAICities.sqf)
+                file = QPATHTOFOLDER(CREATE\fn_createAICities.sqf);
             };
         };
     };

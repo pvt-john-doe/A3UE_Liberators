@@ -12,6 +12,10 @@ private _positionX = getMarkerPos _markerX;
 
 private _num = [_markerX] call A3A_fnc_sizeMarker;
 private _patrolSize = _num;
+// [a3ue_liberators] temporary workaround due to INV being hardcoded as destroyed city owner EVERYWHERE in base Antistasi Ultimate
+if (areInvadersFriendly == 2) then {
+	sidesX setVariable [_markerX, Occupants, true]; 
+};
 
 private _sideX = sidesX getVariable [_markerX,sideUnknown];
 private _faction = Faction(_sideX);
@@ -29,6 +33,7 @@ private _isAAF = true;
 private _params = nil;
 if (_markerX in destroyedSites) then {
 	_isAAF = false;
+	// [a3ue_liberators] Invaders -> sideX
 	_params = [_positionX,_sideX, selectRandom (_faction get "groupSpecOpsRandom")];
 } else {
 	_num = round (_num * (_prestigeOPFOR + _prestigeBLUFOR)/100);
