@@ -14,6 +14,8 @@ private _caller = allPlayers select {
     owner _x == remoteExecutedOwner
 };
 if (_caller isEqualTo [] || (_caller select 0) != theBoss) exitWith {};
+if (areInvadersFriendly != 2) exitWith {};
+if (areInvadersDefeated && tierWar < invadersArriveAtWarLevel) exitWith {};
 
 if (sidesX getVariable [_targetMarker, sideUnknown] != teamPlayer) exitWith {false};
 

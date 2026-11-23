@@ -20,10 +20,10 @@ When REB and INV vs GOV mode is on:
 - Victory conditions take INV control over bases into account
 - Commander can hand over bases to INV via flag context menu
 - INV arrival can be postponed until specified War Level
+- Occupant punishments can be enabled with adjustable chance of starting instead of an Occupant supply convoy
 ### Additional common parameters
 These parameters affect the game regardless of Liberators mode being on or off.
 - Attacks on GOV/INV bases within specified distance from player/HQ are "real", even if the attacked base is not spawned in
-- Occupant punishments can be enabled with adjustable chance of starting instead of an Occupant supply convoy
 
 
 ## Details
@@ -33,6 +33,7 @@ Changes:
 - functions\Missions\fn_findIfNearAndHostile.sqf; functions\Missions\fn_missionRequest.sqf: prevent Petros from giving missions against INV
 - functions\Base\fn_checkWinCondition.sqf: add new win conditions
 - functions\Base\fn_flagaction.sqf: add "Hand over to Liberators" flag action
+- functions\CREATE\fn_createAICities.sqf: spawn Occupants in Occupant-destroyed cities
 
 Changes in the code are marked with "[a3ue_liberators]" comments for easier search
 
